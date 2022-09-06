@@ -7,5 +7,5 @@
 ./scripts/feeds install -a
 
 make defconfig
-make download -j8
+make download -j$(nproc)
 make -j$(nproc) || make -j1 V=s
